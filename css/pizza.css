@@ -15,6 +15,14 @@
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
 }
+.pizza__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.pizza__card {
+  flex-grow: 1;
+}
 
 @media (width >= 666px) {
   .pizza {

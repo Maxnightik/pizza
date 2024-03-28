@@ -1,6 +1,8 @@
 .card {
   position: relative;
   padding-top: 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__img {
@@ -15,6 +17,9 @@
   background: var(--white);
   padding: 48px 8px 8px;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card__title {
@@ -22,12 +27,13 @@
   font-size: 18px;
   text-align: center;
   color: var(--dark);
+  margin-bottom: 4px;
+  flex-grow: 1;
 }
 
 .card__info {
   display: flex;
   justify-content: center;
-  gap: 4px;
   color: var(--beige);
   margin-bottom: 16px;
 }
@@ -45,6 +51,7 @@
   padding: 8px 24px;
   text-align: center;
   background: var(--light);
+  margin-top: auto;
 }
 
 .card__button:hover {

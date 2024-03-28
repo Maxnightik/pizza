@@ -1,0 +1,22 @@
+.footer {
+  padding: 57px 0 24px 0;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  margin-bottom: 32px;
+}
+
+.footer__copyright {
+  color: var(--beige);
+  margin-bottom: 16px;
+}
+
+.footers__develppers {
+  color: var(--beige);
+}

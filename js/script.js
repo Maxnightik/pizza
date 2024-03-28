@@ -41,7 +41,7 @@ const createCard = (data) => {
 
   card.innerHTML = `
     <picture>
-        <source srcset="${data.images[1]}" type="image/webp">
+        <source srcset="${data.images[1]}" type="images/webp">
         <img class="card__img" src="${data.images[0]}" alt="${data.name.uk}">
      </picture>
         <div class="card__content">

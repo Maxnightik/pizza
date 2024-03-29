@@ -25,7 +25,7 @@
   color: var(--orange);
 }
 
-@media (width >= 666px) {
+@media (width >= 686px) {
   .header {
     top: 40px;
   }

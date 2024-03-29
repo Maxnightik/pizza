@@ -88,7 +88,7 @@ fieldset {
   display: none;
 }
 
-@media (width >= 666px) {
+@media (width >= 686px) {
   .container {
     --offset-container: 40px;
   }

@@ -60,7 +60,7 @@
   color: var(--white);
 }
 
-@media (width >= 666px) {
+@media (width >= 686px) {
   .card {
     padding-top: 46px;
   }

@@ -69,7 +69,7 @@
   background-color: var(--orange);
 }
 
-@media (width >= 666px) {
+@media (width >= 686px) {
   .hero {
     border-radius: 0 0 32px 32px;
     margin-bottom: 60px;

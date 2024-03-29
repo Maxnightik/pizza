@@ -59,7 +59,7 @@
   color: var(--light);
 }
 
-@media (width >= 666px) {
+@media (width >= 686px) {
   .toppings {
     padding: 32px 0;
   }

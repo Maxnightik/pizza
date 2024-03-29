@@ -22,7 +22,7 @@ const toppingsToogle = () => {
 const getPizzas = async () => {
   try {
     const response = await fetch(
-      "https://go-go-pizza-api-b6mr.onrender.com/api/products"
+      "https://go-go-pizza-api-14eo.onrender.com/api/products"
     );
     if (!response.ok) {
       throw new Error("Failed to fetch pizzas products");
@@ -45,9 +45,7 @@ const createCard = (data) => {
         <img class="card__img" src="${data.images[0]}" alt="${data.name.uk}">
      </picture>
         <div class="card__content">
-            <h3 class="card__title">${data.name.uk[0].toUpperCase()}${data.name.uk
-    .slice(1)
-    .toLowerCase()}</h3>
+            <h3 class="card__title">${data.name["uk"]}</h3>
 
             <p class="card__info">
                 <span class="card__price">${data.price["25cm"]} грн</span>

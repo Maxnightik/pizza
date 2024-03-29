@@ -35,7 +35,6 @@ const getPizzas = async () => {
 };
 
 const createCard = (data) => {
-  console.log("data: ", data);
   const card = document.createElement("article");
   card.classList.add("card", "pizza__card");
 
@@ -45,7 +44,9 @@ const createCard = (data) => {
         <img class="card__img" src="${data.images[0]}" alt="${data.name.uk}">
      </picture>
         <div class="card__content">
-            <h3 class="card__title">${data.name["uk"]}</h3>
+            <h3 class="card__title">${data.name.uk[0].toUpperCase()}${data.name.uk
+    .slice(1)
+    .toLowerCase()}</h3>
 
             <p class="card__info">
                 <span class="card__price">${data.price["25cm"]} грн</span>

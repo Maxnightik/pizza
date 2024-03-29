@@ -22,7 +22,7 @@ const toppingsToogle = () => {
 const getPizzas = async () => {
   try {
     const response = await fetch(
-      "https://ritzy-olive-shield.glitch.me/api/products"
+      "https://go-go-pizza-api-b6mr.onrender.com/api/products"
     );
     if (!response.ok) {
       throw new Error("Failed to fetch pizzas products");

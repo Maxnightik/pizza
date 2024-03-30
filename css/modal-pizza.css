@@ -1,0 +1,133 @@
+.modal-pizza-main {
+  max-width: 292px;
+  width: 100%;
+  padding: 24px 16px 16px;
+}
+
+.modal-pizza__img {
+  width: 180px;
+  margin: 0 auto 12px;
+}
+
+.modal-pizza__title {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.modal-pizza__toppings {
+  font-size: 14px;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.modal-pizza__info {
+  display: flex;
+  gap: 4px;
+  color: var(--beige);
+  margin-bottom: 20px;
+}
+
+.modal-pizza__price {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.modal-pizza__fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  gap: 7px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border: 1px solid var(--light);
+  border-radius: 32px;
+}
+
+.modal-pizza__fieldset:nth-child {
+  margin-bottom: 0;
+}
+
+.modal-pizza__group-fieldset {
+  margin-bottom: 20px;
+}
+
+.modal-pizza__radio {
+  position: absolute;
+  appearance: none;
+}
+
+.modal-pizza__label {
+  flex-basis: 125px;
+  text-align: center;
+  display: block;
+  color: var(--beige);
+  border-radius: 32px;
+  padding: 10px;
+  background: var(--white);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.modal-pizza__label:hover {
+  color: var(--white);
+  background: var(--orange);
+}
+
+.modal-pizza__radio:focus-visible + .modal-pizza__label {
+  background: var(--white);
+  border-color: #b66200;
+  color: var(--orange);
+}
+
+.modal-pizza__radio:checked + .modal-pizza__label {
+  background: var(--light);
+  color: var(--orange);
+}
+
+.modal-pizza__radio:checked + .modal-pizza__labell:hover {
+  color: var(--white);
+}
+
+.modal-pizza__add-cart {
+  display: block;
+  width: 100%;
+  border-radius: 32px;
+  padding: 8px 24px;
+  background: var(--orange);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--white);
+}
+
+.modal-pizza__add-cart:disabled {
+  opacity: 0.6;
+}
+
+@media (width >= 686px) {
+  .modal-pizza-main {
+    max-width: 368px;
+  }
+  .modal-pizza__title {
+    font-size: 24px;
+  }
+  .modal-pizza__toppings {
+    font-size: 20px;
+  }
+  .modal-pizza__info {
+    gap: 8px;
+    font-size: 20px;
+  }
+  .modal-pizza__weight {
+    font-size: 20px;
+  }
+  .modal-pizza__label {
+    flex-basis: 155px;
+    font-size: 16px;
+  }
+  .modal-pizza__add-cart {
+    font-size: 20px;
+  }
+}

@@ -24,6 +24,27 @@
   flex-grow: 1;
 }
 
+.pizza__reset-toppings {
+  border-radius: 32px;
+  padding: 8px 24px;
+  font-weight: 600;
+  font-size: 20px;
+  background: var(--orange);
+  color: var(--white);
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.pizza__reset-toppings:focus-visible {
+  background-color: var(--white);
+  color: var(--orange);
+  border-color: var(--orange);
+}
+.pizza__reset-toppings:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
 @media (width >= 686px) {
   .pizza {
     padding: 64px 0;
@@ -34,6 +55,9 @@
   .pizza__list {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 16px;
+  }
+  .pizza__reset-toppings {
+    font-size: 20px;
   }
 }
 

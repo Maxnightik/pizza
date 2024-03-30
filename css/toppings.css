@@ -68,6 +68,32 @@
   color: var(--white);
 }
 
+.toppings__reset {
+  display: block;
+  color: var(--orange);
+  border-radius: 32px;
+  padding: 8px 24px;
+  background: var(--white);
+  border: 1px solid transparent;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.toppings__reset:hover {
+  color: var(--orange);
+}
+
+.toppings__reset:focus-visible {
+  background: var(--white);
+  border-color: #b66200;
+  color: var(--orange);
+}
+
+.toppings__reset:hover {
+  color: var(--white);
+  background: var(--orange);
+}
+
 @media (width >= 686px) {
   .toppings {
     padding: 32px 0;
@@ -75,7 +101,8 @@
   .toppings__button {
     font-size: 24px;
   }
-  .toppings__label {
+  .toppings__label,
+  .toppings__reset {
     font-size: 20px;
   }
 }

@@ -62,6 +62,9 @@ export const renderPizzas = async (toppings) => {
       modal: ".modal-pizza",
       btnOpen: ".card__button",
       btnClose: ".modal__close",
+      cbOpen(btnOpen) {
+        console.log("btnOpen: ", btnOpen.dataset.id);
+      },
     });
   } else {
     pizzaTitle.textContent = "Такої піци ми не маємо :(";

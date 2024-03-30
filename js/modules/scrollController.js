@@ -1,7 +1,7 @@
 export const scrollController = {
   scrollPosition: 0,
   disabledScroll() {
-    scrollController.scrollPosition = window.screenY;
+    scrollController.scrollPosition = window.scrollY;
     document.body.style.cssText = `
         overflow: hidden;
         position: fixed;
@@ -14,7 +14,7 @@ export const scrollController = {
 
     document.documentElement.style.scrollBehavior = "unset";
   },
-  enableScroll() {
+  enabledScroll() {
     document.body.style.cssText = "";
     window.scroll({ top: scrollController.scrollPosition });
     document.documentElement.scrollBehavior = "";

@@ -1,11 +1,10 @@
 import { getData } from "./getData.js";
+import { renderPizzas } from "./renderPizzas.js";
 
 export const renderToppings = async () => {
   const { en: enToppings, uk: ukTopings } = await getData(
     "https://go-go-pizza-api-14eo.onrender.com/api/toppings"
   );
-  console.log("ukTopings: ", ukTopings);
-  console.log("enToppings: ", enToppings);
   const toppingsList = document.querySelector(".toppings__list");
   toppingsList.textContent = "";
 
@@ -16,13 +15,31 @@ export const renderToppings = async () => {
        <input class="toppings__checkbox" type="checkbox" id="${enName}" name="topping" value="${enName}">
        <label class="toppings__label" for="${enName}">${ukTopings[
       i
-    ][0].toUpperCase()}${ukTopings[
-      i
-    ].slice(1).toLowerCase()}</label>
+    ][0].toUpperCase()}${ukTopings[i].slice(1).toLowerCase()}</label>
       `;
 
     return item;
   });
 
   toppingsList.append(...items);
+
+  const itemReset = document.createElement("li");
+  itemReset.classList.add("pizza__item");
+  const btnReset = document.createElement("button");
+  btnReset.classList.add("topping__reset");
+  btnReset.textContent = "Скинути";
+  btnReset.type = "reset";
+  itemReset.append(btnReset);
+
+  const toppingsForm = document.querySelector(".toppings__form");
+
+  toppingsForm.addEventListener("change", (event) => {
+    const formData = new FormData(toppingsForm);
+    const checkedToppings = [];
+    for (const [, value] of formData.entries()) {
+      checkedToppings.push(value);
+    }
+
+    renderPizzas(checkedToppings);
+  });
 };

@@ -65,7 +65,7 @@
 }
 
 .toppings__checkbox:checked + .toppings__label:hover {
-  color: var(--beige);
+  color: var(--white);
 }
 
 @media (width >= 686px) {

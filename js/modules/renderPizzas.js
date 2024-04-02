@@ -1,5 +1,7 @@
+import { changeFirstUpperCase } from "./helpers.js";
 import { getData } from "./getData.js";
 import { modalController } from "./modalController.js";
+import { renderModalPizza } from "./renderModalPizza.js";
 
 const btnReset = document.querySelector("button");
 btnReset.classList.add("pizza__reset-toppings");
@@ -17,9 +19,7 @@ const createCard = (data) => {
         <img class="card__img" src="${data.images[0]}" alt="${data.name.uk}">
      </picture>
         <div class="card__content">
-            <h3 class="card__title">${data.name.uk[0].toUpperCase()}${data.name.uk
-    .slice(1)
-    .toLowerCase()}</h3>
+            <h3 class="card__title">${changeFirstUpperCase(data.name.uk)}</h3>
 
             <p class="card__info">
                 <span class="card__price">${data.price["25cm"]} грн</span>
@@ -62,8 +62,12 @@ export const renderPizzas = async (toppings) => {
       modal: ".modal-pizza",
       btnOpen: ".card__button",
       btnClose: ".modal__close",
-      cbOpen(btnOpen) {
-        console.log("btnOpen: ", btnOpen.dataset.id);
+      async cbOpen(btnOpen) {
+        const pizza = await getData(
+          `https://go-go-pizza-api-14eo.onrender.com/api/products/${btnOpen.dataset.id}`
+        );
+
+        renderModalPizza(pizza);
       },
     });
   } else {
